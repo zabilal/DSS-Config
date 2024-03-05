@@ -1,14 +1,13 @@
 server:
   port: 32775
 
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:32771/eureka/
-      
+
 logging:
-  pattern: 
+  pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
 springdoc:
@@ -31,4 +30,4 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://zipkin:9411/api/v2/spans
+      endpoint: http://zipkin:9412/api/v2/spans
