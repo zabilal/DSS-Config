@@ -1,0 +1,34 @@
+server:
+  port: 32775
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:32771/eureka/
+      
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+springdoc:
+  packagesToScan: gloomme.crater365.department
+
+spring:
+  datasource:
+    url: jdbc:mysql://142.4.6.101:3306/departments
+    username: usecrateipi
+    password: Yh21!9208hsT
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
