@@ -4,12 +4,12 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8090/eureka/
+      defaultZone: http://localhost:6000/eureka/
     healthcheck:
       enabled: true
-      
+
 logging:
-  pattern: 
+  pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
 springdoc:
@@ -19,7 +19,7 @@ spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/correspondence?allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password: 
+    password:
 
   jpa:
     database: mysql
@@ -38,7 +38,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: "*"
   endpoint:
     health:
       show-details: always
