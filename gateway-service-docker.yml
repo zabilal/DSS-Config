@@ -4,16 +4,15 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-service:32771/eureka/
+      defaultZone: http://discovery-service:6000/eureka/
   instance:
-    prefer-ip-address: 'true'
+    prefer-ip-address: "true"
 
 logging:
   org.springframework.cloud.gateway: DEBUG
   reactor.netty.http.client: DEBUG
-  pattern: 
+  pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%X{traceId:-},%X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p} %m%n"
-
 
 spring:
   jackson:
@@ -78,7 +77,6 @@ springdoc:
       - name: correspond
         url: /v3/api-docs/correspond
 
-
 management:
   tracing:
     sampling:
@@ -87,7 +85,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: "*"
   endpoint:
     health:
       show-details: always

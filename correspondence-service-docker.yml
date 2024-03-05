@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-service:32771/eureka/
+      defaultZone: http://discovery-service:6000/eureka/
     healthcheck:
       enabled: true
 
